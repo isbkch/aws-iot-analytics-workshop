@@ -339,8 +339,8 @@ Next we will create the IoT Analytics channel that will consume data from the Io
 3. **Create** a new channel
     * **ID:** batchchannel
     * **Choose the Storage Type:** Service-managed store - in this step we will use an IoT Analytics managed S3 bucket, but you may specify a customer-managed bucket as in Step 1b if you wish.
-4. **IoT Core topic filter:** Leave this blank, as the data source for this channel will not be from AWS IoT Core.
-5. Leave all other options as default and click **Next**.
+4. Leave all other options as default and click **Next**.
+5. **IoT Core topic filter:** Leave this blank, as the data source for this channel will not be from AWS IoT Core.
 6. Click **Create Channel**
 
 ### Create the IoT Analytics Pipeline
