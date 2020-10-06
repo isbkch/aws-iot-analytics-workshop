@@ -251,6 +251,7 @@ In this section, you will learn how to use IoT Analytics to extract insights fro
 13. Click **Add rule**
 14. Choose **Deliver result to S3**
     * **S3 bucket:** select the S3 bucket that ends with '-dataset'
+    * **IAM Role:** Create New, and give your new IAM Role a name. This will give IoT Analytics the correct IAM policies to access your S3 bucket.
 13. Click **Create data set** to finalise the creation of the data set.
 
 ### Execute and save the dataset
