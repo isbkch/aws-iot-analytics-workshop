@@ -308,19 +308,19 @@ Once the CloudFormation has completed, navigate to the **Outputs** tab, and see 
 3. Update your EC2 instance:
     * ``sudo yum update``
 4. Build the docker image:
-    * ``docker build -t container-app-ia .``
+    * ``sudo docker build -t container-app-ia .``
 5. Veryify the image is running:
-    * ``docker image ls | grep container-app-ia``
+    * ``sudo docker image ls | grep container-app-ia``
     * You should see an output similar to: ``container-app-ia    latest              ad81fed784f1        2 minutes ago      534MB``
 6. Create a new repository in Amazon Elastic Container Registry (ECR) using the AWS CLI (pre-built on your EC2 instance):
     * ``aws ecr create-repository --repository-name container-app-ia``
     * The output should include a JSON object which includes the item 'repositoryURI'. Copy this value into a text editor for later use.
 7. Login to your Docker environment _(you need the \` for the command to work)_:
-    * `` `aws ecr get-login --no-include-email` ``
+    * `` `sudo aws ecr get-login --no-include-email` ``
 8. Tag the Docker image with the ECR Repository URI:
-    * `docker tag container-app-ia:latest <your repostoryUri here>:latest`
+    * `sudo docker tag container-app-ia:latest <your repostoryUri here>:latest`
 9. Push the image to ECR
-    * `docker push <your repositoryUri here>`
+    * `sudo docker push <your repositoryUri here>`
 
 \[[Top](#Top)\]
 
